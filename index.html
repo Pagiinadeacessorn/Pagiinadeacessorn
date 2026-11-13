@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Supermix Concreto S/A | Concreto e Argamassa de Qualidade</title>
+
+    <meta name="description" content="Supermix Concreto S/A, CNPJ 34.230.979/0001-06. Concreto e argamassa de qualidade desde 1973. Belo Horizonte, MG. Fale conosco pelo WhatsApp.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --azul: #1a1a2e;
+            --azul-claro: #16213e;
+            --laranja: #f7931e;
+            --verde: #25d366;
+            --texto: #333;
+            --cinza-claro: #f5f6f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            color: var(--texto);
+            line-height: 1.7;
+            overflow-wrap: break-word;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+        }
+
+        .header-main {
+            min-height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo strong {
+            font-size: 23px;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #f9ae56;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            color: var(--laranja);
+        }
+
+        .nav-menu .nav-whatsapp {
+            display: inline-block;
+            background: var(--verde);
+            color: #073b1c;
+            padding: 10px 16px;
+            border-radius: 24px;
+            font-weight: 700;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .5);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 24px;
+        }
+
+        /* Apresentação */
+        .hero {
+            margin-top: 84px;
+            background: linear-gradient(135deg, var(--azul) 0%, #203652 100%);
+            padding: 80px 0;
+            color: #fff;
+        }
+
+        .eyebrow {
+            color: #f9ae56;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 5vw, 56px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero .intro {
+            max-width: 700px;
+            color: #dce2ed;
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 26px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: transform .2s, background .2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: var(--verde);
+            color: #073b1c;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, .25);
+        }
+
+        .btn-whatsapp:hover {
+            background: #20c760;
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, .65);
+            color: #fff;
+        }
+
+        .btn-orange {
+            background: var(--laranja);
+            color: #241a0e;
+        }
+
+        .icon-whatsapp {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        /* Resumo cadastral */
+        .summary {
+            background: var(--cinza-claro);
+            padding: 30px 0;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .summary-item {
+            padding-left: 18px;
+            border-left: 3px solid var(--laranja);
+        }
+
+        .summary-item span {
+            display: block;
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .summary-item strong {
+            font-size: 15px;
+        }
+
+        .status {
+            color: #176534;
+        }
+
+        /* Seções */
+        .section {
+            padding: 64px 0;
+        }
+
+        .section-light {
+            background: var(--cinza-claro);
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: clamp(25px, 3vw, 32px);
+            color: var(--azul);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Imagem com texto */
+        .image-text-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .image-text-grid img {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.1);
+        }
+
+        .image-text-content h3 {
+            font-size: 24px;
+            color: var(--azul);
+            margin-bottom: 16px;
+        }
+
+        .image-text-content p {
+            color: #555;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .cards-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .cards-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 28px;
+            border: 1px solid #e7e9ed;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .04);
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.08);
+        }
+
+        .card h3 {
+            font-size: 17px;
+            color: var(--azul);
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .card .value {
+            color: var(--azul);
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .card .status {
+            color: #176534;
+        }
+
+        .card .code {
+            color: #a45400;
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        /* Ícones dos diferenciais */
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+
+        .card-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Galeria */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        }
+
+        /* Endereço */
+        .address-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .address-list {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px 20px;
+            font-size: 14px;
+        }
+
+        .address-list dt {
+            font-weight: 600;
+        }
+
+        .address-list dd {
+            color: #555;
+        }
+
+        address {
+            font-style: normal;
+            line-height: 1.9;
+            margin-bottom: 22px;
+        }
+
+        /* Contato */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #666;
+            margin-bottom: 22px;
+        }
+
+        .contact-number {
+            display: block;
+            margin-top: 14px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* Rodapé */
+        .footer {
+            background: var(--azul);
+            color: #fff;
+            padding: 44px 0 135px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .footer h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .footer p {
+            color: #c9cbd4;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .footer a {
+            color: #f9ae56;
+        }
+
+        .footer-note {
+            border-top: 1px solid rgba(255, 255, 255, .15);
+            margin-top: 28px;
+            padding-top: 20px;
+        }
+
+        /* WhatsApp fixo */
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+            z-index: 1100;
+            max-width: calc(100vw - 40px);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--verde);
+            color: #073b1c;
+            border: 3px solid #fff;
+            padding: 14px 22px;
+            border-radius: 40px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .25);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .floating-whatsapp:hover {
+            background: #20c760;
+        }
+
+        .floating-whatsapp .icon-whatsapp {
+            width: 32px;
+            height: 32px;
+        }
+
+        .floating-whatsapp small {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Acessibilidade */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--laranja);
+            outline-offset: 4px;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: -80px;
+            left: 12px;
+            z-index: 1200;
+            background: #fff;
+            padding: 12px;
+        }
+
+        .skip-link:focus {
+            top: 12px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 900px) {
+            .nav-menu {
+                gap: 14px;
+            }
+
+            .nav-menu a {
+                font-size: 11px;
+            }
+
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards,
+            .cards-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-main {
+                min-height: 76px;
+            }
+
+            .logo strong {
+                font-size: 20px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 22px 5%;
+                background: var(--azul);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 14px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 6px 0;
+                font-size: 14px;
+            }
+
+            .hero {
+                margin-top: 76px;
+                padding: 55px 0;
+            }
+
+            .hero .intro {
+                font-size: 15px;
+            }
+
+            .section {
+                padding: 44px 0;
+            }
+
+            .image-text-grid,
+            .address-grid,
+            .footer-grid,
+            .cards,
+            .cards-2,
+            .cards-4,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 22px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .address-list {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+
+            .address-list dd {
+                margin-bottom: 8px;
+            }
+
+            .floating-whatsapp {
+                right: 12px;
+                padding: 12px 16px;
+                font-size: 15px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .btn,
+            .card,
+            .gallery img {
+                transition: none;
+            }
+
+            .btn:hover,
+            .card:hover,
+            .gallery img:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Ícone reutilizável do WhatsApp -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute">
+        <symbol id="whatsapp-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </symbol>
+    </svg>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container header-main">
+            <a href="#inicio" class="logo" aria-label="Supermix Concreto S/A — início">
+                <strong>SUPERMIX</strong>
+                <span>CONCRETO S/A</span>
+            </a>
+
+            <nav aria-label="Menu principal">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#empresa">EMPRESA</a></li>
+                    <li><a href="#solucoes">SOLUÇÕES</a></li>
+                    <li><a href="#diferenciais">DIFERENCIAIS</a></li>
+                    <li><a href="#dados">DADOS</a></li>
+                    <li><a href="#endereco">ENDEREÇO</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                    <li>
+                        <a class="nav-whatsapp" href="https://wa.me/5511998407831" target="_blank" rel="noopener noreferrer">
+                            WHATSAPP
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Abrir menu" aria-controls="navMenu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <!-- Apresentação -->
+        <section class="hero" id="inicio">
+            <div class="container">
+                <p class="eyebrow">Belo Horizonte · Minas Gerais</p>
+                <h1>Supermix Concreto S/A</h1>
+                <p class="intro">
+                    Há mais de 50 anos fornecendo concreto e argamassa de qualidade para a construção civil.
+                    Tecnologia, experiência e presença nacional para facilitar sua obra.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-whatsapp" href="https://wa.me/5511998407831" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><use href="#whatsapp-icon"></use></svg>
+                        Falar no WhatsApp
+                    </a>
+                    <a class="btn btn-outline" href="#solucoes">Nossas Soluções</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumo cadastral -->
+        <section class="summary" aria-label="Resumo cadastral">
+            <div class="container summary-grid">
+                <div class="summary-item">
+                    <span>CNPJ</span>
+                    <strong>34.230.979/0001-06</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Data de fundação</span>
+                    <strong>30/08/1973</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Município / UF</span>
+                    <strong>Belo Horizonte / MG</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Situação cadastral</span>
+                    <strong class="status">Ativa</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre a empresa -->
+        <section class="section" id="empresa">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sobre a Supermix</h2>
+                    <p>Uma empresa com história e compromisso com a qualidade.</p>
+                </div>
+
+                <div class="image-text-grid">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop" alt="Obra de construção civil com estrutura de concreto">
+                    <div class="image-text-content">
+                        <h3>Tradição e solidez desde 1973</h3>
+                        <p>A <strong>Supermix Concreto S/A</strong>, inscrita no CNPJ <strong>34.230.979/0001-06</strong>, foi fundada em <strong>30/08/1973</strong> em <strong>Belo Horizonte, Minas Gerais</strong>.</p>
+                        <p>Sua atividade principal é <strong>42.99-5-99 — Outras obras de engenharia civil não especificadas anteriormente</strong>, e sua situação cadastral é <strong>Ativa</strong>.</p>
+                        <p>Com décadas de experiência, a Supermix consolidou-se como referência no fornecimento de concreto e argamassa, atendendo obras de todos os portes com tecnologia de ponta e compromisso com prazos e qualidade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soluções -->
+        <section class="section section-light" id="solucoes">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossas Soluções</h2>
+                    <p>Concreto e argamassa para todas as etapas da sua obra.</p>
+                </div>
+
+                <div class="cards cards-4">
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                        </div>
+                        <h3>Concreto Convencional</h3>
+                        <p>O mais utilizado na maioria das obras civis. Qualidade controlada e resistência garantida.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg>
+                        </div>
+                        <h3>Concreto de Alto Desempenho</h3>
+                        <p>Para obras que exigem resistência superior e durabilidade em condições severas.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                        </div>
+                        <h3>Argamassa Supermassa</h3>
+                        <p>Argamassa pré-misturada com dosagem controlada para maior produtividade e acabamento.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                        </div>
+                        <h3>Central Móvel</h3>
+                        <p>Atendimento em obras especiais e distantes, com central montada no próprio canteiro.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diferenciais -->
+        <section class="section" id="diferenciais">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Por que escolher a Supermix</h2>
+                    <p>Pilares que garantem a qualidade reconhecida em todo o Brasil.</p>
+                </div>
+
+                <div class="cards cards-3">
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        </div>
+                        <h3>Tecnologia</h3>
+                        <p>Laboratórios próprios e Núcleos de Tecnologia para análise de insumos, ensaios e certificação de resistência.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                        </div>
+                        <h3>Equipamentos</h3>
+                        <p>Frota renovada de caminhões betoneira, bombas e centrais, com manutenção preventiva rigorosa.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        </div>
+                        <h3>Presença</h3>
+                        <p>Atuação em todos os principais mercados do Brasil, com capacidade de atender obras de qualquer porte.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        </div>
+                        <h3>Pessoas</h3>
+                        <p>Equipe qualificada e treinada, do laboratório ao volante, comprometida com a excelência.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                        </div>
+                        <h3>Experiência</h3>
+                        <p>Décadas de mercado e um portfólio vasto de obras atendidas com excelência em todo o país.</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg>
+                        </div>
+                        <h3>Certificação</h3>
+                        <p>Selo ABNT no Programa de Qualidade de Empresas de Concretagem (ABESC), reconhecendo nossa excelência.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossa Atuação</h2>
+                    <p>Imagens representativas do setor de concretagem e construção civil.</p>
+                </div>
+
+                <div class="gallery">
+                    <img src="https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?w=600&h=400&fit=crop" alt="Caminhão betoneira em operação">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop" alt="Usina de concreto com silos">
+                    <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=600&h=400&fit=crop" alt="Obra de construção civil">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop" alt="Estrutura de concreto em construção">
+                    <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?w=600&h=400&fit=crop" alt="Concreto sendo aplicado em laje">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&h=400&fit=crop" alt="Canteiro de obras com estrutura metálica">
+                </div>
+            </div>
+        </section>
+
+        <!-- Dados cadastrais -->
+        <section class="section" id="dados">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Dados cadastrais</h2>
+                    <p>Informações oficiais da Supermix Concreto S/A.</p>
+                </div>
+
+                <div class="cards">
+                    <article class="card">
+                        <h3>Identificação</h3>
+                        <p class="value">Supermix Concreto S/A</p>
+                        <p>CNPJ: 34.230.979/0001-06</p>
+                        <p>Fundação: 30/08/1973</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Atividade principal</h3>
+                        <p class="code">42.99-5-99</p>
+                        <p>Outras obras de engenharia civil não especificadas anteriormente.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Situação cadastral</h3>
+                        <p class="value status">Ativa</p>
+                        <p>Município: Belo Horizonte</p>
+                        <p>Estado: Minas Gerais</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Endereço -->
+        <section class="section section-light" id="endereco">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Endereço</h2>
+                    <p>Localização e dados para correspondência.</p>
+                </div>
+
+                <div class="address-grid">
+                    <article class="card">
+                        <h3>Localização</h3>
+                        <dl class="address-list">
+                            <dt>Logradouro</dt>
+                            <dd>Rua Prof. José Vieira de Mendonça, 1121 B</dd>
+                            <dt>Bairro</dt>
+                            <dd>Engenho Nogueira</dd>
+                            <dt>CEP</dt>
+                            <dd>31310-260</dd>
+                            <dt>Município</dt>
+                            <dd>Belo Horizonte</dd>
+                            <dt>Estado</dt>
+                            <dd>Minas Gerais</dd>
+                        </dl>
+                    </article>
+
+                    <article class="card">
+                        <h3>Para correspondência</h3>
+                        <address>
+                            <strong>Supermix Concreto S/A</strong><br>
+                            Rua Prof. José Vieira de Mendonça, 1121 B<br>
+                            Engenho Nogueira<br>
+                            Belo Horizonte MG<br>
+                            31310-260
+                        </address>
+                        <a class="btn btn-orange" href="https://www.google.com/maps/search/?api=1&query=Rua+Prof.+Jos%C3%A9+Vieira+de+Mendon%C3%A7a+1121+B+Engenho+Nogueira+Belo+Horizonte+MG+31310-260" target="_blank" rel="noopener noreferrer">
+                            Ver no mapa
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section class="section contact" id="contato">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Fale Conosco</h2>
+                </div>
+                <p>Solicite um orçamento ou tire suas dúvidas pelo WhatsApp.</p>
+                <a class="btn btn-whatsapp" href="https://wa.me/5511998407831" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><use href="#whatsapp-icon"></use></svg>
+                    Entrar em contato
+                </a>
+                <span class="contact-number">(11) 99840-7831</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Supermix Concreto S/A</h3>
+                    <p>CNPJ: 34.230.979/0001-06</p>
+                    <p>Fundação: 30/08/1973</p>
+                    <p>Atividade: 42.99-5-99 — Outras obras de engenharia civil não especificadas anteriormente.</p>
+                </div>
+                <div>
+                    <h3>Endereço e contato</h3>
+                    <p>Rua Prof. José Vieira de Mendonça, 1121 B — Engenho Nogueira</p>
+                    <p>Belo Horizonte — Minas Gerais</p>
+                    <p>CEP: 31310-260</p>
+                    <p><a href="https://wa.me/5511998407831" target="_blank" rel="noopener noreferrer">WhatsApp: (11) 99840-7831</a></p>
+                </div>
+            </div>
+            <div class="footer-note">
+                <p>Informações cadastrais apresentadas conforme os dados fornecidos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão fixo do WhatsApp -->
+    <a class="floating-whatsapp" href="https://wa.me/5511998407831" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp: (11) 99840-7831">
+        <svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><use href="#whatsapp-icon"></use></svg>
+        <span>
+            Falar no WhatsApp
+            <small>(11) 99840-7831</small>
+        </span>
+    </a>
+
+    <script>
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        function setMenu(open) {
+            navMenu.classList.toggle('active', open);
+            menuBtn.setAttribute('aria-expanded', String(open));
+            menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+        }
+
+        menuBtn.addEventListener('click', () => {
+            const open = menuBtn.getAttribute('aria-expanded') !== 'true';
+            setMenu(open);
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMenu(false));
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                setMenu(false);
+                menuBtn.focus();
+            }
+        });
+    </script>
+</body>
+</html>
